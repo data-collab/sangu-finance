@@ -1,9 +1,25 @@
 <section class="budgetSec">
-  <datepicker-views-selection-example></datepicker-views-selection-example>
+  <div class="filter">
+    <div>
+      <h3>Filter</h3>
+    <datepicker-views-selection-example></datepicker-views-selection-example>
+    </div>
+    <div class="categoryFilter">
+      <input type="text" placeholder="Category" />
+    </div>
+    <div class="textFilter">
+      <input type="text" placeholder="Search..."/>
+    </div>
+  </div>
   <div class="d1">
     <h1>Budgets</h1>
-    <button (click)="addBudget()">Add Budget</button>   
-    <input type="text" [(ngModel)]="totalBudget" class="addBudgetInput" [class.addBudgetActive]="addBudgetDisable"/>
+    <button (click)="addBudget()">Add Budget</button>
+    <input
+      type="text"
+      [(ngModel)]="totalBudget"
+      class="addBudgetInput"
+      [class.addBudgetActive]="addBudgetDisable"
+    />
   </div>
   <div class="d2">
     <div>
@@ -35,9 +51,9 @@
         <td>{{ item.Budget }}</td>
         <td>{{ item.usedAmount }}</td>
         @if(item.balanceLeft > 0){
-          <td [style.color]="'green'">{{item.balanceLeft}}</td>
+        <td [style.color]="'green'">{{ item.balanceLeft }}</td>
         }@else {
-          <td [style.color]="'red'">{{item.balanceLeft}}</td>
+        <td [style.color]="'red'">{{ item.balanceLeft }}</td>
         }
         <td>
           <i

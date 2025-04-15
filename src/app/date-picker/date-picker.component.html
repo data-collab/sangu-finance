@@ -1,13 +1,10 @@
 <mat-form-field>
-  <mat-label>Month and Year</mat-label>
-  <input matInput [matDatepicker]="dp" [formControl]="date" />
-  <mat-hint>MM/YYYY</mat-hint>
-  <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
-  <mat-datepicker
-    #dp
-    startView="multi-year"
-    (monthSelected)="setMonthAndYear($event, dp)"
-    panelClass="example-month-picker"
-  >
-  </mat-datepicker>
+  <mat-label>Enter a date range</mat-label>
+  <mat-date-range-input [rangePicker]="picker">
+    <input matStartDate placeholder="Start date">
+    <input matEndDate placeholder="End date">
+  </mat-date-range-input>
+  <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker></mat-date-range-picker>
 </mat-form-field>

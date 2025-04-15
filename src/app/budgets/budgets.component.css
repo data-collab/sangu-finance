@@ -7,6 +7,19 @@
   flex-direction: column;
   gap: 20px;
 }
+.budgetSec .filter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.budgetSec .filter div input {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  padding-left: 10px;
+  border: 1px solid #e02d43;
+  border-radius: 10px;
+}
 .budgetSec .d1 {
   display: flex;
   align-items: center;
