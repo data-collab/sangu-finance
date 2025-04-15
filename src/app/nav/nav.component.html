@@ -1,0 +1,35 @@
+<nav>
+  <ul>
+    <li
+      routerLink="/home"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Home
+    </li>
+    <li routerLink="/budget">Budget</li>
+    @if(isAuthenticated()){
+
+    <li (click)="onLogout()">Log Out</li>
+    }@else if(!isAuthenticated()){
+    <!-- <li routerLink="/auth">Budget</li> -->
+    <li
+      routerLink="/auth"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Log In
+    </li>
+
+    }
+  </ul>
+</nav>
+
+<!-- Confirmation Modal for Log Out -->
+<div *ngIf="showLogoutModal" class="modal-overlay">
+  <div class="modal">
+    <p>Are you sure you want to log out?</p>
+    <button (click)="logoutConfirmed()">Yes, log out</button>
+    <button (click)="cancelLogout()">Cancel</button>
+  </div>
+</div>

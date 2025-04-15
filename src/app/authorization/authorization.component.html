@@ -1,0 +1,68 @@
+<section class="wrapper" [class.active]="isVisited">
+  <!-- Signup Form -->
+  <div class="form signup" (click)="useRegister()">
+    <header [class.active]="isVisited">Signup</header>
+    <form action="#" [formGroup]="RegisterForm" (submit)="onRegister()">
+      <input type="text" placeholder="Full name" formControlName="fullName" />
+      <div *ngIf="RegisterForm.get('fullName')?.invalid && RegisterForm.get('fullName')?.touched" class="error-message">
+        Full name is required.
+      </div>
+
+      <input type="text" placeholder="Email address" formControlName="email" />
+      <div *ngIf="RegisterForm.get('email')?.invalid && RegisterForm.get('email')?.touched" class="error-message">
+        Please enter a valid email address.
+      </div>
+
+      <input type="password" placeholder="Password" formControlName="password" />
+      <div *ngIf="RegisterForm.get('password')?.invalid && RegisterForm.get('password')?.touched" class="error-message">
+        Password must be at least 6 characters long.
+      </div>
+
+      <input type="password" placeholder="Again Password" formControlName="confirmPassword" />
+      <div *ngIf="RegisterForm.get('confirmPassword')?.invalid && RegisterForm.get('confirmPassword')?.touched" class="error-message">
+        Please confirm your password.
+      </div>
+
+      <select name="currency" formControlName="currencyPreference">
+        <option value="GEL" selected>GEL</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="RUB">RUB</option>
+        <option value="TL">TL</option>
+      </select>
+      <div *ngIf="RegisterForm.get('currencyPreference')?.invalid && RegisterForm.get('currencyPreference')?.touched" class="error-message">
+        Please select a currency preference.
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="signupCheck" formControlName="acceptTerms" />
+        <label for="signupCheck">I accept all terms & conditions</label>
+      </div>
+      <div *ngIf="RegisterForm.get('acceptTerms')?.invalid && RegisterForm.get('acceptTerms')?.touched" class="error-message">
+        You must accept the terms & conditions.
+      </div>
+
+      <button type="submit" [disabled]="!RegisterForm.invalid || !RegisterForm.value.acceptTerms">Signup</button>
+    </form>
+  </div>
+
+  <!-- Login Form -->
+  <div class="form login" (click)="useLogin()">
+    <header [class.active]="isVisited">Login</header>
+    <form action="#" [formGroup]="signInForm" (submit)="onLogin()">
+      <input type="text" placeholder="Email address" formControlName="email" />
+      <div *ngIf="signInForm.get('email')?.invalid && signInForm.get('email')?.touched" class="error-message">
+        Please enter a valid email address.
+      </div>
+
+      <input type="password" placeholder="Password" formControlName="password" />
+      <div *ngIf="signInForm.get('password')?.invalid && signInForm.get('password')?.touched" class="error-message">
+        Password is required.
+      </div>
+
+      <a href="#">Forgot password?</a>
+
+      <input type="submit" value="Login" [disabled]="signInForm.invalid" />
+    </form>
+  </div>
+</section>

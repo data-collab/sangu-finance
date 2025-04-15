@@ -1,0 +1,142 @@
+.budgetSec {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.budgetSec .d1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.budgetSec .d1 button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  background-color: #e02d43;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.budgetSec .d1 button:hover {
+  transform: scale(1.1);
+}
+.budgetSec .d1 .addBudgetInput {
+  outline: none;
+  width: 130px;
+  height: 40px;
+}
+.budgetSec .d1 .addBudgetActive {
+  display: none;
+}
+.budgetSec .d2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.budgetSec .d2 div {
+  width: 200px;
+  height: 100px;
+  border: 1px solid rgb(163, 163, 163);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+  padding-left: 20px;
+}
+.budgetSec .d2 div p {
+  color: grey;
+  font-weight: 600;
+}
+.budgetSec .d3 {
+  width: 100%;
+}
+.budgetSec .d3 table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.budgetSec .d3 table tr {
+  height: 60px;
+  border-bottom: 1px solid grey;
+}
+.budgetSec .d3 table tr th {
+  text-align: start;
+  color: grey;
+}
+.budgetSec .d3 table tr td {
+  font-weight: 700;
+}
+.budgetSec .d3 .formDiv {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  background-color: rgba(1, 2, 1, 0.5);
+  left: 0;
+  top: 0;
+  display: none;
+  position: fixed;
+}
+.budgetSec .d3 .formDiv form {
+  width: 500px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  margin: auto;
+  gap: 20px;
+}
+.budgetSec .d3 .formDiv form div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.budgetSec .d3 .formDiv form div input {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  padding-left: 10px;
+  border: 1px solid #e02d43;
+  border-radius: 10px;
+}
+.budgetSec .d3 .formDiv form div input:focus {
+  box-shadow: 0 1px 0 #ff2f2f;
+}
+.budgetSec .d3 .formDiv form button {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  background-color: #e02d43;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.budgetSec .d3 .formDiv form button:hover {
+  transform: scale(1.1);
+}
+.budgetSec .d3 .active {
+  display: flex;
+}
+.budgetSec .d3 .addProd {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  background-color: #e02d43;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.budgetSec .d3 .addProd:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=budgets.component.css.map */
