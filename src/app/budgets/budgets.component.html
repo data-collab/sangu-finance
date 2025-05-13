@@ -2,13 +2,13 @@
   <div class="filter">
     <div>
       <h3>Filter</h3>
-    <datepicker-views-selection-example></datepicker-views-selection-example>
+      <datepicker-views-selection-example></datepicker-views-selection-example>
     </div>
     <div class="categoryFilter">
       <input type="text" placeholder="Category" />
     </div>
     <div class="textFilter">
-      <input type="text" placeholder="Search..."/>
+      <input type="text" placeholder="Search..." />
     </div>
   </div>
   <div class="d1">
@@ -17,6 +17,14 @@
     <input
       type="text"
       [(ngModel)]="totalBudget"
+      class="addBudgetInput"
+      [class.addBudgetActive]="addBudgetDisable"
+      placeholder="Budget"
+    />
+    <input
+      type="text"
+      placeholder="Year"
+      [(ngModel)]="year"
       class="addBudgetInput"
       [class.addBudgetActive]="addBudgetDisable"
     />
@@ -60,6 +68,7 @@
             class="fa-solid fa-pen-to-square"
             (click)="editBtn($index, item.Name, item.Budget, item.usedAmount)"
           ></i>
+          <i class="fa-solid fa-plus"></i>
         </td>
       </tr>
       }

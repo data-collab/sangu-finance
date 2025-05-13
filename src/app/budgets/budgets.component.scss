@@ -42,7 +42,10 @@
     .addBudgetInput {
       outline: none;
       width: 130px;
-      height: 40px;
+      height: 50px;
+      padding-left: 10px;
+      border: 1px solid #e02d43;
+      border-radius: 10px;
     }
     .addBudgetActive {
       display: none;

@@ -12,9 +12,10 @@ import { BudgetService } from '../services/budget.service';
 })
 export class BudgetsComponent implements OnInit {
   public prodName!: string;
-  public totalBudget: any;
-  public totalUsed: any;
-  public budget: any;
+  public totalBudget!: number;
+  public year:any
+  public totalUsed!: number;
+  public budget!: any;
   public usedAmount!: any;
   public totalLeft:any;
   public balanceLeft!: any;
